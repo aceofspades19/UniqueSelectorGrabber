@@ -5,12 +5,21 @@
   "version": "1.0",
 
   "description": "Get a unique selector by right clicking",
+  
+  "background": {
+    "scripts": ["uniqueselectorgrabber.js"]
+  },
 
   "content_scripts": [
     {
       "matches": ["*://*.mozilla.org/*"],
-      "js": ["uniqueselectorgrabber.js"]
+      "js": ["script.js"]
     }
+  ],
+
+ "permissions": [
+    "activeTab",
+    "contextMenus"
   ]
 
 }
